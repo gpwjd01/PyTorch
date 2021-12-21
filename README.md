@@ -1,6 +1,6 @@
-# Pytorch
+# [2021-18] PyTorch로 배우는 머신러닝 알고리즘
 
-e-koreatech : [2021-18] PyTorch로 배우는 머신러닝 알고리즘
+e-koreatech
 
 case 1) DNN으로 심장병 판별하기
 
