@@ -1,11 +1,7 @@
 # PyTorch로 배우는 머신러닝 알고리즘
 
 e-koreatech
-
 * case 1) Determining heart disease with DNN
-
-* case 2) CNN으로 칼라 이미지 구분하기
-
-* case 3) RNN으로 영화평 구분하기
-
-* case 4) DC-GAN으로 손글씨 모방하기
+* case 2) Separating color images with CNN
+* case 3) Classifying movie reviews with RNN
+* case 4) Imitating Handwriting with DC-GAN
