@@ -1,4 +1,4 @@
-# PyTorch로 배우는 머신러닝 알고리즘
+# Learning Machine Learning Algorithms with PyTorch
 
 * case 1) Determining heart disease with DNN
 * case 2) Separating color images with CNN
