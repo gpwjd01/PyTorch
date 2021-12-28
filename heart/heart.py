@@ -15,8 +15,6 @@ INPUT_DIM = 13      # 입력
 MY_HIDDEN = 1000    # 은닉층
 MY_EPOCH = 1000     # 학습 횟수
 
-# 실습 1 : seed가 없으면 매번 실행 때마다 결과가 달라진다. =>  f1 점수(정확도)
-
 # 추가 옵션: 임의의 수 생성 및 지정
 pd.set_option('display.max_columns', None)
 torch.manual_seed(111)      # 임의의 수 생성
@@ -76,12 +74,6 @@ sns.set(font_scale=2)
 
 ############## 인공 신경망 구현 ##############
 
-# 실습 3 : 은닉층 추가 => 가중치, 학습 시간, 정확도 증가
-# nn.Linear(MY_HIDDEN, 5000),         # 2 & 3번째 은닉층
-# nn.Tanh(),
-# nn.Linear(5000, 1),
-# 실습 4 : Tanh() -> ReLU() => 가중치 변화X, 정확도 & 학습시간 증가
-
 # 파이토치 DNN을 Sequential 모델로 구현
 model = nn.Sequential(
     nn.Linear(INPUT_DIM, MY_HIDDEN),    # 입력층 & 1번째 은닉층
@@ -98,9 +90,6 @@ print(model)
 # 총 파라미터 수 계산
 total = sum(p.numel() for p in model.parameters())
 print('총 파라미터 수: {:,}'.format(total))
-
-# 실습 2 : optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-# 실습 2 : optimizer = torch.optim.RMSprop(model.parameters(), lr=0.01) => 정확도 감소, 학습 시간 증가
 
 # 최적화 함수와 손실 함수 지정
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
@@ -168,4 +157,3 @@ print('정답:', Y_train.flatten())
 
 f1 = f1_score(Y_test, pred)
 print('\n최종 정확도 (F1 점수): {:.3f}'.format(f1))
-
